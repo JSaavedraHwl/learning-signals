@@ -1,0 +1,25 @@
+.example-container {
+  height: 100vh;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+
+.drawer-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button{
+  width: 150px;
+}

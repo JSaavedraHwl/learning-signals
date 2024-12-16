@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Learning Signals</span>
+    <span class="example-spacer"></span>
+   
+  </mat-toolbar>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="drawer-content">
+      <button mat-raised-button color="primary" class="full-width" routerLink="/">Volver</button>
+    </div>
+
+    
+  </mat-drawer>
+  <div class="px-4 mt-4">
+    <ng-content></ng-content>
+  </div>
+</mat-drawer-container>

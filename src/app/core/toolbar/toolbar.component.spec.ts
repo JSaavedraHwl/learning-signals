@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { YoryoComponent } from './yoryo.component';
+import { ToolbarComponent } from './toolbar.component';
 
-describe('YoryoComponent', () => {
-  let component: YoryoComponent;
-  let fixture: ComponentFixture<YoryoComponent>;
+describe('ToolbarComponent', () => {
+  let component: ToolbarComponent;
+  let fixture: ComponentFixture<ToolbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [YoryoComponent]
+      declarations: [ToolbarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(YoryoComponent);
+    fixture = TestBed.createComponent(ToolbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
