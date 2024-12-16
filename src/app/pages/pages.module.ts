@@ -6,9 +6,10 @@ import { CrisComponent } from './cris/cris.component';
 import { JorgeComponent } from './jorge/jorge.component';
 import { MainComponent } from './main/main.component';
 import { CoreModule } from '../core/core.module';
+import { SignalsComponent } from './cris/signals/signals.component';
 
 @NgModule({
-  declarations: [CrisComponent, JorgeComponent, MainComponent],
+  declarations: [CrisComponent, JorgeComponent, MainComponent, SignalsComponent],
   imports: [
     CommonModule,
     RouterModule,

@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
+import { ExampleComponentComponent } from './example-component/example-component.component';
 
 
 
 @NgModule({
   declarations: [
-    ToolbarComponent
+    ToolbarComponent,
+    ExampleComponentComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
   ],
   exports:[
-    ToolbarComponent
+    ToolbarComponent,
+    ExampleComponentComponent
   ]
 })
 export class CoreModule { }
