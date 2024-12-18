@@ -7,6 +7,7 @@ import { JorgeComponent } from './jorge/jorge.component';
 import { MainComponent } from './main/main.component';
 import { CoreModule } from '../core/core.module';
 import { SignalsComponent } from './cris/signals/signals.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [CrisComponent, JorgeComponent, MainComponent, SignalsComponent],
@@ -14,12 +15,21 @@ import { SignalsComponent } from './cris/signals/signals.component';
     CommonModule,
     RouterModule,
     MaterialModule,
-    CoreModule
+    CoreModule,
+    HighlightModule
   ],
   exports: [
     CrisComponent,
     JorgeComponent,
     MainComponent
+  ],
+  providers:[
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
   ]
 })
 export class PagesModule {}
