@@ -6,17 +6,22 @@ import { CrisComponent } from './cris/cris.component';
 import { JorgeComponent } from './jorge/jorge.component';
 import { MainComponent } from './main/main.component';
 import { CoreModule } from '../core/core.module';
-import { SignalsComponent } from './cris/signals/signals.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { SignalBasicoComponent } from './cris/signals/signal-basico/signal-basico.component';
+import { SignalServiceComponentComponent } from './cris/signals/signal-service-component/signal-service-component.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [CrisComponent, JorgeComponent, MainComponent, SignalsComponent],
+  declarations: [CrisComponent, JorgeComponent, MainComponent, SignalBasicoComponent, SignalServiceComponentComponent],
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule,
     CoreModule,
-    HighlightModule
+    HighlightModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     CrisComponent,
@@ -29,7 +34,8 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
       useValue: {
         fullLibraryLoader: () => import('highlight.js'),
       }
-    }
+    },
+    HttpClient
   ]
 })
 export class PagesModule {}

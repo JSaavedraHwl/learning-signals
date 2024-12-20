@@ -1,0 +1,40 @@
+<mat-card class="p-4 border border-2 border-primary rounded">
+    <div class="row reset">
+      <div class="col-12 col-md-12">
+        <section>
+          <h1 class="fs-4 fw-medium">Signals basico</h1>
+          <mat-divider class="custom-divider"></mat-divider>
+
+          <p>
+            Los signals permiten a Angular rastrear de manera granular cómo y dónde se utiliza el estado en
+            la aplicación, optimizando las actualizaciones de renderizado y mejorando el rendimiento.
+          </p>
+        </section>
+      </div>
+
+    <div class="col-12 mt-3">
+        <section>
+            <h1 class="fs-4 fw-medium">Implementación</h1>
+            <mat-divider class="custom-divider"></mat-divider>
+          <mat-tab-group>
+            <mat-tab label="TS">
+              <pre><code [highlight]="codigoEjemploTS" language="typescript"></code></pre>
+            </mat-tab>
+            <mat-tab label="HTML">
+              <pre><code [highlight]="codigoEjemploHTML" language="html"></code></pre>
+            </mat-tab>
+            <mat-tab label="Ejemplo">
+              <section class="row reset">
+                <form class="col-12 col-md-12 col-lg-8 ">
+                  <mat-form-field class="mt-4" appearance="outline">
+                    <input #textoEjemplo matInput placeholder="Escriba aquí" (keyup)="enviar(textoEjemplo.value)" name="texto" />
+                  </mat-form-field>
+                </form>
+                <h4><span class="fw-medium">Valor del signal:</span> {{ textoIngresado() }}</h4>
+              </section>
+            </mat-tab>
+          </mat-tab-group>
+        </section>
+      </div>
+    </div>
+  </mat-card>

@@ -12,3 +12,9 @@ $my-theme: mat.define-light-theme((
 ));
 
 @include mat.all-component-themes($my-theme);
+
+.reset{
+  padding: 0!important;
+  margin: 0 !important;
+  border: 0 !important;
+}

@@ -1,7 +1,13 @@
 <app-toolbar>
     <h1 class="fs-2">Cris</h1>
     <mat-tab-group>
-        <mat-tab label="Signal"> <app-signals/> </mat-tab>
+        <mat-tab label="Signal">
+          <div class="row reset">
+            <div class="col-12 col-md-6 col-md-4"><app-signal-basico/></div>
+            <div class="col-12 col-md-6 col-md-4"><app-signal-service-component/></div>
+            <div class="col-12 col-md-6 col-md-4"></div>
+          </div>
+        </mat-tab>
         <mat-tab label="Second"> Content 2 </mat-tab>
         <mat-tab label="Third"> Content 3 </mat-tab>
       </mat-tab-group>

@@ -1,0 +1,18 @@
+<mat-card class="p-4">
+  <h1 class="fs-4">Buscar Pokémon</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre del Pokémon</mat-label>
+    <input matInput [(ngModel)]="pokemonName" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="searchPokemon()">Buscar</button>
+
+  <section *ngIf="pokemonData">
+    <h2 class="fs-5">Detalles del Pokémon</h2>
+    <p><strong>Nombre:</strong> {{ pokemonData?.name }}</p>
+    <p><strong>Peso:</strong> {{ pokemonData?.weight }}</p>
+    <p><strong>Altura:</strong> {{ pokemonData?.height }}</p>
+    <img [src]="pokemonData?.sprites.front_default" alt="Imagen del Pokémon" />
+  </section>
+</mat-card>
